@@ -21,7 +21,7 @@ Requirements
 	<li>The commands <code style="display:inline;">buildbot</code> and <code style="display:inline;">buildslave</code> need to be in the system PATH.</li>
 </ul>
 
-* Under previous versions of buildbot, the <code style="display:inline;">buildslave</code> command does not respect the <code style="display:inline;">--nodaemon</code> option. As a result, buildslaves will fork when started, preventing them from being controlled as child processes. This issue does not occur under Windows (where <code style="display:inline;">fork()</code> is not supported anyway), but a version that recognises the <code style="display:inline;">--nodaemon</code> option is still required.
+\* Under previous versions of buildbot, the <code style="display:inline;">buildslave</code> command does not respect the <code style="display:inline;">--nodaemon</code> option. As a result, buildslaves will fork when started, preventing them from being controlled as child processes. This issue does not occur under Windows (where <code style="display:inline;">fork()</code> is not supported anyway), but a version that recognises the <code style="display:inline;">--nodaemon</code> option is still required.
 
 Build Requirements
 ------------------
