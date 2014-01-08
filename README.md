@@ -9,8 +9,8 @@ Features
 <ul>
 	<li>Recursively scans a user-specified directory and locates all buildmasters and buildslaves.</li>
 	<li>Start and stop buildmasters and buildslaves with a simple double-click.</li>
-	<li>Run the <pre>checkconfig</pre> command to check buildmaster configuration files for errors.</li>
-	<li>Output window displays the stdout and stderr of the selected instance, including <pre>statuslog</pre> output for buildmasters.</li>
+	<li>Run the <code style="display:inline;">checkconfig</code> command to check buildmaster configuration files for errors.</li>
+	<li>Output window displays the stdout and stderr of the selected instance, including <code style="display:inline;">statuslog</code> output for buildmasters.</li>
 </ul>
 
 Requirements
@@ -18,10 +18,10 @@ Requirements
 
 <ul>
 	<li>Buildbot version 0.8.8 or newer.*</li>
-	<li>The commands <pre>buildbot</pre> and <pre>buildslave</pre> need to be in the system PATH.</li>
+	<li>The commands <code style="display:inline;">buildbot</code> and <code style="display:inline;">buildslave</code> need to be in the system PATH.</li>
 </ul>
 
-* Under previous versions of buildbot, the <pre>buildslave</pre> command does not respect the <pre>--nodaemon</pre> option. As a result, buildslaves will fork when started, preventing them from being controlled as child processes. This issue does not occur under Windows (where <pre>fork()</pre> is not supported anyway), but a version that recognises the <pre>--nodaemon</pre> option is still required.
+* Under previous versions of buildbot, the <code style="display:inline;">buildslave</code> command does not respect the <code style="display:inline;">--nodaemon</code> option. As a result, buildslaves will fork when started, preventing them from being controlled as child processes. This issue does not occur under Windows (where <code style="display:inline;">fork()</code> is not supported anyway), but a version that recognises the <code style="display:inline;">--nodaemon</code> option is still required.
 
 Build Requirements
 ------------------
