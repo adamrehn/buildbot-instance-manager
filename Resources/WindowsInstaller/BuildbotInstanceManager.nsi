@@ -93,6 +93,10 @@ Section "Uninstall"
   
   ; Delete the config files and directory
   Delete $APPDATA\BuildbotInstanceManager\BuildbotInstanceManager.ini
+  RMDir $APPDATA\BuildbotInstanceManager
+  
+  ; Remove the "Add/Remove Programs" uninstall information
+  DeleteRegKey HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\BuildbotInstanceManager"
   
   ; Delete the installation directory
   RMDir $INSTDIR
@@ -120,5 +124,23 @@ Section ""
   
   ; Write the uninstaller
   WriteUninstaller $INSTDIR\uninstall.exe
+  
+  ; Add the "Add/Remove Programs" uninstall information
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\BuildbotInstanceManager" \
+                   "DisplayName" "Buildbot Instance Manager"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\BuildbotInstanceManager" \
+                   "UninstallString" "$\"$INSTDIR\uninstall.exe$\""
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\BuildbotInstanceManager" \
+                   "QuietUninstallString" "$\"$INSTDIR\uninstall.exe$\" /S"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\BuildbotInstanceManager" \
+                   "DisplayIcon" "$\"$INSTDIR\BuildbotInstanceManager.exe$\",0"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\BuildbotInstanceManager" \
+                   "Publisher" "Adam Rehn"
+  WriteRegStr HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\BuildbotInstanceManager" \
+                   "DisplayVersion" ${APP_VERSION}
+  WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\BuildbotInstanceManager" \
+                   "NoModify" 1
+  WriteRegDWORD HKLM "Software\Microsoft\Windows\CurrentVersion\Uninstall\BuildbotInstanceManager" \
+                   "NoRepair " 1
   
 SectionEnd
