@@ -15,6 +15,8 @@ RC_FILE = Resources/win_res.rc
 ICON = Resources/icon.icns
 QMAKE_INFO_PLIST = Resources/Info.plist
 
+unix:!mac { LIBS += -Wl,-rpath=. }
+
 SOURCES += main.cpp\
     BuildbotInstanceManagerGUI.cpp \
     BuildbotInstance.cpp \

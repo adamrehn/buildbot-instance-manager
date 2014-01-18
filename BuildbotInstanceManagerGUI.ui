@@ -189,15 +189,6 @@
     <layout class="QHBoxLayout" name="horizontalLayout_3">
      <item>
       <widget class="QPushButton" name="rescanButton">
-       <property name="toolTip">
-        <string/>
-       </property>
-       <property name="toolTipDuration">
-        <number>-1</number>
-       </property>
-       <property name="statusTip">
-        <string/>
-       </property>
        <property name="text">
         <string>Rescan Instances</string>
        </property>
