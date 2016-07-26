@@ -3,7 +3,7 @@ Buildbot Instance Manager
 
 Buildbot Instance Manager is a GUI control panel for managing buildmasters and buildslaves located on the local filesystem. It is designed to assist in testing buildmaster configuration changes on the local machine prior to pushing them to a production server, which often involves stopping and starting the local buildmaster repeatedly.
 
-Binaries for Windows, Mac OS X, and Linux are available from <http://adamrehn.com/apps/gui/buildbot-instance-manager>.
+Binaries for Windows, Mac OS X, and Linux are available from [the releases page](https://github.com/adamrehn/buildbot-instance-manager/releases).
 
 Features
 --------
